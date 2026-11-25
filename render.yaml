@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: day14-agent
+    runtime: docker
+    plan: free
+    region: singapore
+    rootDir: 06-lab-complete
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: AGENT_API_KEY
+        generateValue: true
+      - key: REDIS_URL
+        fromService:
+          type: keyvalue
+          name: day14-redis
+          property: connectionString
+      - key: ENVIRONMENT
+        value: production
+      - key: RATE_LIMIT_PER_MINUTE
+        value: "10"
+      - key: MONTHLY_BUDGET_USD
+        value: "10"
+  - type: keyvalue
+    name: day14-redis
+    region: singapore
+    plan: free
+    ipAllowList: []

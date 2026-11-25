@@ -147,3 +147,14 @@ cd benchmark-observability
 | `production/` | Docker Compose: agent x2 + Nginx + Prometheus + Grafana + Jaeger + Locust, 4 alert rules |
 
 Hướng dẫn đầy đủ: [benchmark-observability/README.md](benchmark-observability/README.md). Nộp kèm `BENCHMARK_REPORT.md` theo [mẫu](benchmark-observability/BENCHMARK_REPORT_TEMPLATE.md).
+
+
+## Ghi chú bản hoàn thiện
+
+- Python local phải chạy trong WSL (đã kiểm bằng Python 3.11). Kết quả đầy đủ: `../reports/production-readiness.txt` — PASS 12/12, 43/43 checks.
+- Đặt AGENT_API_KEY bằng giá trị ngẫu nhiên riêng trong env, rồi chạy `docker compose -p k5-day14-final up --build`. Không để key rỗng: API từ chối mọi request khi chưa cấu hình key.
+- Rate limit dùng Redis sorted set và Lua để không có race giữa worker; cost lưu theo ngày/tháng UTC trong Redis. `/health` độc lập Redis, `/ready` trả 503 khi Redis lỗi.
+- Graceful shutdown do Uvicorn xử lý, lifespan đóng client Redis sau khi request đang chạy hoàn tất. Token cost là ước lượng của mock, không phải usage từ nhà cung cấp thật.
+- Part 7 Grafana mở ở cổng **3001** (hoặc biến GRAFANA_PORT) vì cổng 3000 đang có ứng dụng khác. Dockerfile observable agent đã sửa home user để Python tìm thấy dependencies.
+- Khi chạy Locust với một số replica cụ thể, thêm `docker compose run --rm --no-deps locust ...` để Compose không thay số replica theo mặc định.
+- Báo cáo ở gốc repo: MISSION_ANSWERS.md, BENCHMARK_REPORT.md, DEPLOYMENT.md. Phần deploy cloud chỉ hoàn thành khi có URL thật và đủ bằng chứng kiểm tra.

@@ -58,6 +58,13 @@ class LLMResult:
 # Mỗi entry: (các từ khoá kích hoạt, nội dung tài liệu)
 # ─────────────────────────────────────────────────────────
 KNOWLEDGE_BASE: list[tuple[list[str], str]] = [
+    (["jwt", "api key"],
+     "JWT là token có chữ ký để kiểm tra tính toàn vẹn, chứa danh tính và thời điểm hết hạn. "
+     "API key thường là chuỗi bí mật cố định, cần thu hồi hoặc rotate ở server; "
+     "JWT có thể xác minh chữ ký mà không tra session ở server."),
+    (["kubernetes", "hpa", "autoscaling"],
+     "Kubernetes HPA điều chỉnh số replica dựa trên CPU, memory hoặc custom metrics "
+     "như request rate và queue depth. Cần cấu hình mục tiêu và giới hạn min/max replica."),
     (["multi-stage", "multi stage"],
      "Multi-stage build tách Dockerfile thành stage builder (cài compiler, build dependencies) "
      "và stage runtime chỉ copy kết quả cần thiết. Image cuối nhỏ hơn và ít lỗ hổng bảo mật hơn."),
