@@ -1,7 +1,20 @@
 # Deployment — Day 14
 
-## Trạng thái
-Agent local đã PASS 12/12. Người học đã tạo Blueprint Render labday14 từ commit 184f547; ảnh screenshots/dashboard.png ghi trạng thái sync đang chạy, tạo day14-redis và day14-agent. **Đang chờ URL public và kết quả kiểm tra cloud**, chưa khẳng định service đã live.
+## Public URL
+https://day14-agent-tb33.onrender.com
+
+## Platform
+Render — Blueprint labday14; agent và Redis dùng plan Free, region Singapore.
+
+## Trạng thái đã xác minh
+- GET /health → **200**, body `{"status":"ok"}`.
+- GET /ready → **200**, body `{"status":"ready"}`: Redis cloud kết nối được.
+- POST /ask thiếu API key → **401**.
+- POST /ask có API key → **200**, trả câu trả lời về Docker và cost_usd.
+
+**PASS 4/4 kiểm tra cloud.** Người học nhập key vào hộp thoại che ký tự; key không được ghi vào report hoặc Git.
+
+Bằng chứng HTTP thực tế: `reports/cloud-checks.json`. Ảnh `screenshots/dashboard.png` do người học cung cấp cho thấy Blueprint sync commit 184f547 thành công, tạo đủ day14-redis và day14-agent. Ảnh `screenshots/running.png` chụp endpoint health public.
 
 ## Cấu hình có sẵn
 Source: `06-lab-complete/`. Có `railway.toml`, `render.yaml` và Dockerfile production.
@@ -33,16 +46,18 @@ curl -sS -o /dev/null -w '%{http_code}\n' -X POST "$BASE/ask" -H 'Content-Type: 
 ```
 Kỳ vọng lần lượt 200, 200, 401, 200. Lưu output thật vào reports và chụp dashboard, service running, test results vào screenshots. Che secret trước khi chụp.
 
-## Bằng chứng còn cần bổ sung
-- URL public và kết quả 4 lệnh cloud.
-- screenshots/dashboard.png
-- screenshots/running.png
-- screenshots/test.png
+## Bằng chứng đã lưu
+- `reports/cloud-checks.json`: bốn response HTTP thật, không chứa key.
+- `screenshots/dashboard.png`: Blueprint tạo Redis và agent thành công.
+- `screenshots/running.png`: endpoint health public trả status ok.
+- `screenshots/test.png`: ảnh trang hiển thị bốn kết quả từ cloud-checks.json.
 
 
 ## Kiểm tra có key mà không lộ secret
 Sau khi có URL và service live, chạy tại gốc repo:
 ```powershell
-python scripts/check_public_deployment.py --url https://TEN-DICH-VU.onrender.com
+python scripts/check_public_deployment.py --url https://day14-agent-tb33.onrender.com
 ```
 Script hỏi API key qua getpass (không echo, không ghi key vào báo cáo). Lấy giá trị AGENT_API_KEY ở Render → day14-agent → Environment và dán vào prompt; không gửi key trong chat. Kết quả 4 trường hợp lưu trong reports/cloud-checks.json.
+
+Nếu Terminal không dán được key, thêm `--gui-key` vào lệnh để nhập trong hộp thoại có che ký tự.

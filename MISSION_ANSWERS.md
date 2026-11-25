@@ -61,7 +61,7 @@ Nginx nhận cổng 80/443 và proxy tới agent:8000. Agent dùng Redis qua tê
 ## Part 3: Cloud Deployment
 
 ### Exercise 3.1–3.2
-Trạng thái URL và cách deploy agent Part 6: xem `DEPLOYMENT.md`. Chưa có URL public thì chưa coi phần deploy là hoàn thành.
+Đã deploy agent Part 6 trên Render: https://day14-agent-tb33.onrender.com. Kiểm tra public thực tế: /health 200, /ready 200, POST /ask thiếu key 401. POST /ask có key cũng đã trả 200: đủ PASS 4/4 kiểm tra cloud; xem DEPLOYMENT.md và reports/cloud-checks.json. Ảnh dashboard đã xác nhận Blueprint tạo thành công Redis và agent.
 
 | Nội dung | Railway | Render |
 |---|---|---|
@@ -157,4 +157,4 @@ Output script chấm đầy đủ (bản gốc: `reports/production-readiness.tx
 
 AI log này ghi công việc AI thực sự đã làm, không khẳng định người học đã tự sửa hay tự chạy khi chưa xác nhận.
 
-Các bước bổ sung trong cùng phiên AI: sửa home user trong Dockerfile observability mẫu; chuyển Grafana sang cổng 3001; dùng --no-deps để giữ đúng replica khi chạy Locust; chạy kết hợp lỗi/chậm, đổi model, pause instance và eval v1; chụp 4 ảnh observability. Có một lượt scaling bị gián đoạn làm duration không phù hợp nên giữ riêng evidence cũ và chạy lại; bảng cuối chỉ dùng CSV của lượt chạy lại. Người học trực tiếp đăng nhập Render, chọn repo và tạo Blueprint; AI chuẩn bị và push cấu hình Free cùng source đã kiểm tra. URL cloud vẫn cần xác minh trước khi nộp.
+Các bước bổ sung trong cùng phiên AI: sửa home user trong Dockerfile observability mẫu; chuyển Grafana sang cổng 3001; dùng --no-deps để giữ đúng replica khi chạy Locust; chạy kết hợp lỗi/chậm, đổi model, pause instance và eval v1; chụp 4 ảnh observability. Có một lượt scaling bị gián đoạn làm duration không phù hợp nên giữ riêng evidence cũ và chạy lại; bảng cuối chỉ dùng CSV của lượt chạy lại. Người học trực tiếp đăng nhập Render, chọn repo và tạo Blueprint; AI chuẩn bị và push cấu hình Free cùng source đã kiểm tra. URL cloud đã xác minh health 200, ready 200 và thiếu key 401; người học đã nhập key trực tiếp qua hộp thoại có che ký tự, script xác nhận có key 200. Không lưu key vào file/Git.
