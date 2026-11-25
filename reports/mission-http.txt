@@ -1,0 +1,7 @@
+Part 1 query /ask: 200 {"answer":"Đây là câu trả lời từ AI agent (mock). Trong production, đây sẽ là response từ OpenAI/Anthropic."}
+Part 4 no auth: 401 {"detail":"Authentication required. Include: Authorization: Bearer <token>"}
+POST /auth/token: 200 [token redacted]
+POST /ask: 200 {"question":"Docker","answer":"Container là cách đóng gói app để chạy ở mọi nơi. Build once, run anywhere!","usage":{"requests_remaining":9,"budget_remaining_usd":1.8e-05}}
+POST /ask: 429 {"detail":{"error":"Rate limit exceeded","limit":10,"window_seconds":60,"retry_after_seconds":59}}
+POST /ask: 429 {"detail":{"error":"Rate limit exceeded","limit":10,"window_seconds":60,"retry_after_seconds":59}}
+12 sequential requests: [200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 429, 429]

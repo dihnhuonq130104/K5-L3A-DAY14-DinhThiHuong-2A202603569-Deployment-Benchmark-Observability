@@ -1,0 +1,128 @@
+{
+  "slow": {
+    "trace_id": "e54355d53c3caa9ffe34c9d8024f4c0a",
+    "status": 200,
+    "client_ms": 1706.06,
+    "spans": [
+      {
+        "name": "agent.retrieve_context",
+        "ms": 18.002013,
+        "events": []
+      },
+      {
+        "name": "chat mock-llm-small",
+        "ms": 1681.351924,
+        "events": []
+      },
+      {
+        "name": "agent.run",
+        "ms": 1699.464282,
+        "events": []
+      },
+      {
+        "name": "POST /ask",
+        "ms": 1701.847478,
+        "events": []
+      }
+    ],
+    "total_ms": 1701.847478,
+    "logs": [
+      "{\"ts\": \"2026-11-25T09:19:03.208478+00:00\", \"level\": \"INFO\", \"service\": \"observable-agent\", \"instance\": \"7c256fb6e9a9\", \"event\": \"llm_call\", \"trace_id\": \"e54355d53c3caa9ffe34c9d8024f4c0a\", \"span_id\": \"cd0d19bac5e92fb6\", \"request_id\": \"42105cf98f96\", \"model\": \"mock-llm-small\", \"agent_version\": \"v2\", \"input_tokens\": 75, \"output_tokens\": 39, \"cost_usd\": 3.5e-05, \"llm_ms\": 1682.3}",
+      "{\"ts\": \"2026-11-25T09:19:03.208672+00:00\", \"level\": \"INFO\", \"service\": \"observable-agent\", \"instance\": \"7c256fb6e9a9\", \"event\": \"http_request\", \"trace_id\": \"e54355d53c3caa9ffe34c9d8024f4c0a\", \"span_id\": \"cd0d19bac5e92fb6\", \"request_id\": \"42105cf98f96\", \"method\": \"POST\", \"route\": \"/ask\", \"status\": 200, \"ms\": 1701.5}"
+    ]
+  },
+  "error": {
+    "trace_id": "66c9eecef096701d0ab751d0c5152443",
+    "status": 503,
+    "client_ms": 118.89,
+    "spans": [
+      {
+        "name": "agent.retrieve_context",
+        "ms": 23.464757,
+        "events": []
+      },
+      {
+        "name": "chat mock-llm-small",
+        "ms": 85.649986,
+        "events": [
+          {
+            "timeUnixNano": "1795598343328180781",
+            "name": "exception",
+            "attributes": [
+              {
+                "key": "exception.escaped",
+                "value": {
+                  "stringValue": "False"
+                }
+              },
+              {
+                "key": "exception.message",
+                "value": {
+                  "stringValue": "Upstream LLM error: 503 Service Unavailable (mock)"
+                }
+              },
+              {
+                "key": "exception.stacktrace",
+                "value": {
+                  "stringValue": "Traceback (most recent call last):\n  File \"/app/app/main.py\", line 153, in run_agent\n    result = await mock_llm.generate(question, context=context,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/utils/mock_llm.py\", line 206, in generate\n    raise LLMError(\"Upstream LLM error: 503 Service Unavailable (mock)\")\nutils.mock_llm.LLMError: Upstream LLM error: 503 Service Unavailable (mock)\n"
+                }
+              },
+              {
+                "key": "exception.type",
+                "value": {
+                  "stringValue": "utils.mock_llm.LLMError"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "agent.run",
+        "ms": 109.445016,
+        "events": [
+          {
+            "timeUnixNano": "1795598343328485323",
+            "name": "exception",
+            "attributes": [
+              {
+                "key": "exception.escaped",
+                "value": {
+                  "stringValue": "False"
+                }
+              },
+              {
+                "key": "exception.message",
+                "value": {
+                  "stringValue": "Upstream LLM error: 503 Service Unavailable (mock)"
+                }
+              },
+              {
+                "key": "exception.stacktrace",
+                "value": {
+                  "stringValue": "Traceback (most recent call last):\n  File \"/home/agent/.local/lib/python3.11/site-packages/opentelemetry/trace/__init__.py\", line 602, in use_span\n    yield span\n  File \"/home/agent/.local/lib/python3.11/site-packages/opentelemetry/sdk/trace/__init__.py\", line 1136, in start_as_current_span\n    yield span\n  File \"/home/agent/.local/lib/python3.11/site-packages/opentelemetry/trace/__init__.py\", line 441, in start_as_current_span\n    yield span\n  File \"/app/app/main.py\", line 153, in run_agent\n    result = await mock_llm.generate(question, context=context,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/utils/mock_llm.py\", line 206, in generate\n    raise LLMError(\"Upstream LLM error: 503 Service Unavailable (mock)\")\nutils.mock_llm.LLMError: Upstream LLM error: 503 Service Unavailable (mock)\n"
+                }
+              },
+              {
+                "key": "exception.type",
+                "value": {
+                  "stringValue": "utils.mock_llm.LLMError"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "POST /ask",
+        "ms": 111.76509,
+        "events": []
+      }
+    ],
+    "total_ms": 111.76509,
+    "logs": [
+      "{\"ts\": \"2026-11-25T09:19:03.328532+00:00\", \"level\": \"INFO\", \"service\": \"observable-agent\", \"instance\": \"7c256fb6e9a9\", \"event\": \"llm_error\", \"trace_id\": \"66c9eecef096701d0ab751d0c5152443\", \"span_id\": \"4cf78b10c8b6d5fb\", \"request_id\": \"d165f455fc7a\", \"error\": \"Upstream LLM error: 503 Service Unavailable (mock)\"}",
+      "{\"ts\": \"2026-11-25T09:19:03.328848+00:00\", \"level\": \"INFO\", \"service\": \"observable-agent\", \"instance\": \"7c256fb6e9a9\", \"event\": \"http_request\", \"trace_id\": \"66c9eecef096701d0ab751d0c5152443\", \"span_id\": \"4cf78b10c8b6d5fb\", \"request_id\": \"d165f455fc7a\", \"method\": \"POST\", \"route\": \"/ask\", \"status\": 503, \"ms\": 111.3}"
+    ]
+  }
+}

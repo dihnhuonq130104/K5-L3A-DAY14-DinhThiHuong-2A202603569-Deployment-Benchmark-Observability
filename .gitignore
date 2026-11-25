@@ -34,3 +34,10 @@ Thumbs.db
 # ── Docker volumes (local dev) ─────────────────────��──────
 data/
 volumes/
+
+# Local Docker configuration for WSL lab runs
+.docker-lab/
+
+# Raw production outputs are submitted under root benchmark-results/
+06-lab-complete/benchmark-observability/production/benchmark-results/*
+!06-lab-complete/benchmark-observability/production/benchmark-results/.gitkeep

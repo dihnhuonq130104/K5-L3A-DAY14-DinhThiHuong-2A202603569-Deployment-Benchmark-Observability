@@ -1,0 +1,21 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 25 Nov 2026 09:13:25 GMT
+Content-Type: application/json
+Content-Length: 95
+Connection: keep-alive
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+
+{"status":"ok","uptime_seconds":6.6,"version":"2.0.0","timestamp":"2026-11-25T09:13:25.871392"}HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 25 Nov 2026 09:13:26 GMT
+Content-Type: application/json
+Content-Length: 103
+Connection: keep-alive
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+
+{"answer":"Container là cách đóng gói app để chạy ở mọi nơi. Build once, run anywhere!"}

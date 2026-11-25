@@ -1,0 +1,6 @@
+ Container k5-day14-observability-jaeger-1 Running 
+ Container k5-day14-observability-locust-1 Running 
+ Container k5-day14-observability-agent-1 Running 
+ Container k5-day14-observability-nginx-1 Running 
+ Container k5-day14-observability-prometheus-1 Running 
+ Container k5-day14-observability-grafana-1 Running 

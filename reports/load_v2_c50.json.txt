@@ -1,0 +1,17 @@
+
+════════════════════════════════════════════════════════
+  LOAD TEST REPORT — http://localhost:8002
+════════════════════════════════════════════════════════
+  Requests     : 300  (concurrency=50)
+  Duration     : 3.0 s
+  Throughput   : 99.86 req/s
+  Error rate   : 1.00%   {'200': 297, '503': 3}
+  Total cost   : $0.01018
+  Latency (ms) : min=156.5  avg=270.1  max=1766.9
+                 p50=218.7  p90=276.2  p95=292.3  p99=1722.4
+────────────────────────────────────────────────────────
+  SLO p95 ≤ 500ms        : ✅ PASS
+  SLO error rate ≤ 2.0%  : ✅ PASS
+════════════════════════════════════════════════════════
+
+💾 Đã lưu report: /mnt/e/vin/K5-L3A-DAY14-DinhThiHuong-2A202603569-Deployment-Benchmark-Observability/reports/load_v2_c50.json

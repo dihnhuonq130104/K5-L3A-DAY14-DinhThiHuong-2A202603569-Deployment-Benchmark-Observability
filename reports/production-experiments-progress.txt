@@ -1,0 +1,10 @@
+scale_1: 100 users, 120 seconds
+scale_3: 100 users, 120 seconds
+AB_errors_and_latency
+AB_screenshot_ready
+C_large_model
+D_pause_instance
+bb531589b595a27255536f1545aca0976f7310b90b9c89226fe3ec74abbc7108
+bb531589b595a27255536f1545aca0976f7310b90b9c89226fe3ec74abbc7108
+E_v1_quality
+complete

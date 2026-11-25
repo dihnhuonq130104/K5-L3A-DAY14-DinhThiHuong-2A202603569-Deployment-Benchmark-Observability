@@ -1,0 +1,383 @@
+[
+  {
+    "elapsed_s": 5.0,
+    "alerts": [
+      {
+        "labels": {
+          "alertname": "LLMCostBurnRateHigh",
+          "severity": "warning"
+        },
+        "annotations": {
+          "description": "T\u1ed1c \u0111\u1ed9 chi ti\u00eau hi\u1ec7n t\u1ea1i: $72.38/gi\u1edd",
+          "summary": "Chi ph\u00ed LLM \u0111ang v\u01b0\u1ee3t $2/gi\u1edd"
+        },
+        "state": "firing",
+        "activeAt": "2026-11-25T10:36:02.571501534Z",
+        "value": "7.237665066395628e+01"
+      }
+    ]
+  },
+  {
+    "elapsed_s": 10.11,
+    "alerts": [
+      {
+        "labels": {
+          "alertname": "AgentInstanceDown",
+          "instance": "172.22.0.8:8000",
+          "job": "agent",
+          "severity": "critical"
+        },
+        "annotations": {
+          "description": "Prometheus kh\u00f4ng g\u1ecdi \u0111\u01b0\u1ee3c /metrics c\u1ee7a 172.22.0.8:8000 trong 30s",
+          "summary": "Instance agent 172.22.0.8:8000 kh\u00f4ng scrape \u0111\u01b0\u1ee3c"
+        },
+        "state": "pending",
+        "activeAt": "2026-11-25T10:44:27.401817116Z",
+        "value": "0e+00"
+      },
+      {
+        "labels": {
+          "alertname": "LLMCostBurnRateHigh",
+          "severity": "warning"
+        },
+        "annotations": {
+          "description": "T\u1ed1c \u0111\u1ed9 chi ti\u00eau hi\u1ec7n t\u1ea1i: $72.25/gi\u1edd",
+          "summary": "Chi ph\u00ed LLM \u0111ang v\u01b0\u1ee3t $2/gi\u1edd"
+        },
+        "state": "firing",
+        "activeAt": "2026-11-25T10:36:02.571501534Z",
+        "value": "7.225289975526933e+01"
+      }
+    ]
+  },
+  {
+    "elapsed_s": 15.21,
+    "alerts": [
+      {
+        "labels": {
+          "alertname": "AgentInstanceDown",
+          "instance": "172.22.0.8:8000",
+          "job": "agent",
+          "severity": "critical"
+        },
+        "annotations": {
+          "description": "Prometheus kh\u00f4ng g\u1ecdi \u0111\u01b0\u1ee3c /metrics c\u1ee7a 172.22.0.8:8000 trong 30s",
+          "summary": "Instance agent 172.22.0.8:8000 kh\u00f4ng scrape \u0111\u01b0\u1ee3c"
+        },
+        "state": "pending",
+        "activeAt": "2026-11-25T10:44:27.401817116Z",
+        "value": "0e+00"
+      },
+      {
+        "labels": {
+          "alertname": "LLMCostBurnRateHigh",
+          "severity": "warning"
+        },
+        "annotations": {
+          "description": "T\u1ed1c \u0111\u1ed9 chi ti\u00eau hi\u1ec7n t\u1ea1i: $72.16/gi\u1edd",
+          "summary": "Chi ph\u00ed LLM \u0111ang v\u01b0\u1ee3t $2/gi\u1edd"
+        },
+        "state": "firing",
+        "activeAt": "2026-11-25T10:36:02.571501534Z",
+        "value": "7.215838721905315e+01"
+      }
+    ]
+  },
+  {
+    "elapsed_s": 20.32,
+    "alerts": [
+      {
+        "labels": {
+          "alertname": "AgentInstanceDown",
+          "instance": "172.22.0.8:8000",
+          "job": "agent",
+          "severity": "critical"
+        },
+        "annotations": {
+          "description": "Prometheus kh\u00f4ng g\u1ecdi \u0111\u01b0\u1ee3c /metrics c\u1ee7a 172.22.0.8:8000 trong 30s",
+          "summary": "Instance agent 172.22.0.8:8000 kh\u00f4ng scrape \u0111\u01b0\u1ee3c"
+        },
+        "state": "pending",
+        "activeAt": "2026-11-25T10:44:27.401817116Z",
+        "value": "0e+00"
+      },
+      {
+        "labels": {
+          "alertname": "LLMCostBurnRateHigh",
+          "severity": "warning"
+        },
+        "annotations": {
+          "description": "T\u1ed1c \u0111\u1ed9 chi ti\u00eau hi\u1ec7n t\u1ea1i: $72.22/gi\u1edd",
+          "summary": "Chi ph\u00ed LLM \u0111ang v\u01b0\u1ee3t $2/gi\u1edd"
+        },
+        "state": "firing",
+        "activeAt": "2026-11-25T10:36:02.571501534Z",
+        "value": "7.221889694451346e+01"
+      }
+    ]
+  },
+  {
+    "elapsed_s": 25.43,
+    "alerts": [
+      {
+        "labels": {
+          "alertname": "AgentInstanceDown",
+          "instance": "172.22.0.8:8000",
+          "job": "agent",
+          "severity": "critical"
+        },
+        "annotations": {
+          "description": "Prometheus kh\u00f4ng g\u1ecdi \u0111\u01b0\u1ee3c /metrics c\u1ee7a 172.22.0.8:8000 trong 30s",
+          "summary": "Instance agent 172.22.0.8:8000 kh\u00f4ng scrape \u0111\u01b0\u1ee3c"
+        },
+        "state": "pending",
+        "activeAt": "2026-11-25T10:44:27.401817116Z",
+        "value": "0e+00"
+      },
+      {
+        "labels": {
+          "alertname": "LLMCostBurnRateHigh",
+          "severity": "warning"
+        },
+        "annotations": {
+          "description": "T\u1ed1c \u0111\u1ed9 chi ti\u00eau hi\u1ec7n t\u1ea1i: $72.39/gi\u1edd",
+          "summary": "Chi ph\u00ed LLM \u0111ang v\u01b0\u1ee3t $2/gi\u1edd"
+        },
+        "state": "firing",
+        "activeAt": "2026-11-25T10:36:02.571501534Z",
+        "value": "7.23932200052449e+01"
+      }
+    ]
+  },
+  {
+    "elapsed_s": 30.53,
+    "alerts": [
+      {
+        "labels": {
+          "alertname": "AgentInstanceDown",
+          "instance": "172.22.0.8:8000",
+          "job": "agent",
+          "severity": "critical"
+        },
+        "annotations": {
+          "description": "Prometheus kh\u00f4ng g\u1ecdi \u0111\u01b0\u1ee3c /metrics c\u1ee7a 172.22.0.8:8000 trong 30s",
+          "summary": "Instance agent 172.22.0.8:8000 kh\u00f4ng scrape \u0111\u01b0\u1ee3c"
+        },
+        "state": "pending",
+        "activeAt": "2026-11-25T10:44:27.401817116Z",
+        "value": "0e+00"
+      },
+      {
+        "labels": {
+          "alertname": "LLMCostBurnRateHigh",
+          "severity": "warning"
+        },
+        "annotations": {
+          "description": "T\u1ed1c \u0111\u1ed9 chi ti\u00eau hi\u1ec7n t\u1ea1i: $72.59/gi\u1edd",
+          "summary": "Chi ph\u00ed LLM \u0111ang v\u01b0\u1ee3t $2/gi\u1edd"
+        },
+        "state": "firing",
+        "activeAt": "2026-11-25T10:36:02.571501534Z",
+        "value": "7.259382011457627e+01"
+      }
+    ]
+  },
+  {
+    "elapsed_s": 35.65,
+    "alerts": [
+      {
+        "labels": {
+          "alertname": "AgentInstanceDown",
+          "instance": "172.22.0.8:8000",
+          "job": "agent",
+          "severity": "critical"
+        },
+        "annotations": {
+          "description": "Prometheus kh\u00f4ng g\u1ecdi \u0111\u01b0\u1ee3c /metrics c\u1ee7a 172.22.0.8:8000 trong 30s",
+          "summary": "Instance agent 172.22.0.8:8000 kh\u00f4ng scrape \u0111\u01b0\u1ee3c"
+        },
+        "state": "pending",
+        "activeAt": "2026-11-25T10:44:27.401817116Z",
+        "value": "0e+00"
+      },
+      {
+        "labels": {
+          "alertname": "LLMCostBurnRateHigh",
+          "severity": "warning"
+        },
+        "annotations": {
+          "description": "T\u1ed1c \u0111\u1ed9 chi ti\u00eau hi\u1ec7n t\u1ea1i: $72.80/gi\u1edd",
+          "summary": "Chi ph\u00ed LLM \u0111ang v\u01b0\u1ee3t $2/gi\u1edd"
+        },
+        "state": "firing",
+        "activeAt": "2026-11-25T10:36:02.571501534Z",
+        "value": "7.27967814860685e+01"
+      }
+    ]
+  },
+  {
+    "elapsed_s": 40.76,
+    "alerts": [
+      {
+        "labels": {
+          "alertname": "AgentInstanceDown",
+          "instance": "172.22.0.8:8000",
+          "job": "agent",
+          "severity": "critical"
+        },
+        "annotations": {
+          "description": "Prometheus kh\u00f4ng g\u1ecdi \u0111\u01b0\u1ee3c /metrics c\u1ee7a 172.22.0.8:8000 trong 30s",
+          "summary": "Instance agent 172.22.0.8:8000 kh\u00f4ng scrape \u0111\u01b0\u1ee3c"
+        },
+        "state": "firing",
+        "activeAt": "2026-11-25T10:44:27.401817116Z",
+        "value": "0e+00"
+      },
+      {
+        "labels": {
+          "alertname": "LLMCostBurnRateHigh",
+          "severity": "warning"
+        },
+        "annotations": {
+          "description": "T\u1ed1c \u0111\u1ed9 chi ti\u00eau hi\u1ec7n t\u1ea1i: $72.97/gi\u1edd",
+          "summary": "Chi ph\u00ed LLM \u0111ang v\u01b0\u1ee3t $2/gi\u1edd"
+        },
+        "state": "firing",
+        "activeAt": "2026-11-25T10:36:02.571501534Z",
+        "value": "7.297397770922225e+01"
+      }
+    ]
+  },
+  {
+    "elapsed_s": 45.94,
+    "alerts": [
+      {
+        "labels": {
+          "alertname": "AgentInstanceDown",
+          "instance": "172.22.0.8:8000",
+          "job": "agent",
+          "severity": "critical"
+        },
+        "annotations": {
+          "description": "Prometheus kh\u00f4ng g\u1ecdi \u0111\u01b0\u1ee3c /metrics c\u1ee7a 172.22.0.8:8000 trong 30s",
+          "summary": "Instance agent 172.22.0.8:8000 kh\u00f4ng scrape \u0111\u01b0\u1ee3c"
+        },
+        "state": "firing",
+        "activeAt": "2026-11-25T10:44:27.401817116Z",
+        "value": "0e+00"
+      },
+      {
+        "labels": {
+          "alertname": "LLMCostBurnRateHigh",
+          "severity": "warning"
+        },
+        "annotations": {
+          "description": "T\u1ed1c \u0111\u1ed9 chi ti\u00eau hi\u1ec7n t\u1ea1i: $73.13/gi\u1edd",
+          "summary": "Chi ph\u00ed LLM \u0111ang v\u01b0\u1ee3t $2/gi\u1edd"
+        },
+        "state": "firing",
+        "activeAt": "2026-11-25T10:36:02.571501534Z",
+        "value": "7.313265908610796e+01"
+      }
+    ]
+  },
+  {
+    "elapsed_s": 51.04,
+    "alerts": [
+      {
+        "labels": {
+          "alertname": "AgentInstanceDown",
+          "instance": "172.22.0.8:8000",
+          "job": "agent",
+          "severity": "critical"
+        },
+        "annotations": {
+          "description": "Prometheus kh\u00f4ng g\u1ecdi \u0111\u01b0\u1ee3c /metrics c\u1ee7a 172.22.0.8:8000 trong 30s",
+          "summary": "Instance agent 172.22.0.8:8000 kh\u00f4ng scrape \u0111\u01b0\u1ee3c"
+        },
+        "state": "firing",
+        "activeAt": "2026-11-25T10:44:27.401817116Z",
+        "value": "0e+00"
+      },
+      {
+        "labels": {
+          "alertname": "LLMCostBurnRateHigh",
+          "severity": "warning"
+        },
+        "annotations": {
+          "description": "T\u1ed1c \u0111\u1ed9 chi ti\u00eau hi\u1ec7n t\u1ea1i: $73.29/gi\u1edd",
+          "summary": "Chi ph\u00ed LLM \u0111ang v\u01b0\u1ee3t $2/gi\u1edd"
+        },
+        "state": "firing",
+        "activeAt": "2026-11-25T10:36:02.571501534Z",
+        "value": "7.328888935071348e+01"
+      }
+    ]
+  },
+  {
+    "elapsed_s": 56.18,
+    "alerts": [
+      {
+        "labels": {
+          "alertname": "AgentInstanceDown",
+          "instance": "172.22.0.8:8000",
+          "job": "agent",
+          "severity": "critical"
+        },
+        "annotations": {
+          "description": "Prometheus kh\u00f4ng g\u1ecdi \u0111\u01b0\u1ee3c /metrics c\u1ee7a 172.22.0.8:8000 trong 30s",
+          "summary": "Instance agent 172.22.0.8:8000 kh\u00f4ng scrape \u0111\u01b0\u1ee3c"
+        },
+        "state": "firing",
+        "activeAt": "2026-11-25T10:44:27.401817116Z",
+        "value": "0e+00"
+      },
+      {
+        "labels": {
+          "alertname": "LLMCostBurnRateHigh",
+          "severity": "warning"
+        },
+        "annotations": {
+          "description": "T\u1ed1c \u0111\u1ed9 chi ti\u00eau hi\u1ec7n t\u1ea1i: $73.39/gi\u1edd",
+          "summary": "Chi ph\u00ed LLM \u0111ang v\u01b0\u1ee3t $2/gi\u1edd"
+        },
+        "state": "firing",
+        "activeAt": "2026-11-25T10:36:02.571501534Z",
+        "value": "7.339114481157405e+01"
+      }
+    ]
+  },
+  {
+    "elapsed_s": 61.28,
+    "alerts": [
+      {
+        "labels": {
+          "alertname": "LLMCostBurnRateHigh",
+          "severity": "warning"
+        },
+        "annotations": {
+          "description": "T\u1ed1c \u0111\u1ed9 chi ti\u00eau hi\u1ec7n t\u1ea1i: $73.67/gi\u1edd",
+          "summary": "Chi ph\u00ed LLM \u0111ang v\u01b0\u1ee3t $2/gi\u1edd"
+        },
+        "state": "firing",
+        "activeAt": "2026-11-25T10:36:02.571501534Z",
+        "value": "7.367313835555787e+01"
+      },
+      {
+        "labels": {
+          "alertname": "AgentInstanceDown",
+          "instance": "172.22.0.8:8000",
+          "job": "agent",
+          "severity": "critical"
+        },
+        "annotations": {
+          "description": "Prometheus kh\u00f4ng g\u1ecdi \u0111\u01b0\u1ee3c /metrics c\u1ee7a 172.22.0.8:8000 trong 30s",
+          "summary": "Instance agent 172.22.0.8:8000 kh\u00f4ng scrape \u0111\u01b0\u1ee3c"
+        },
+        "state": "firing",
+        "activeAt": "2026-11-25T10:44:27.401817116Z",
+        "value": "0e+00"
+      }
+    ]
+  }
+]
